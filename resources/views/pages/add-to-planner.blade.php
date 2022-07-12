@@ -2,11 +2,15 @@
 @extends('layouts.master')
 @section('title', 'Current Plans')
 @section('plans')
-    <h2>Current Plans</h2>
+    <div class="results-body">
+        <h1>Current Plans</h1>
+        <table class="planner-table">
+            <tr>
+                <td class="planner-table-td">
 
-    <ul>
-        <li>Test 2</li>
-        <li>Test 2</li>
-    </ul>
+                </td>
+            </tr>
+        </table>
+    </div>
 @endsection
 
