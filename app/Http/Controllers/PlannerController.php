@@ -16,4 +16,9 @@ class PlannerController extends BaseController
     {
         //todo load code
     }
+
+    public function addToPlanner()
+    {
+        echo "Added to planner." . $_GET['plan-idea'];
+    }
 }

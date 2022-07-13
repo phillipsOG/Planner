@@ -2164,7 +2164,27 @@ module.exports = {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
-$(document).ready(function () {});
+$(document).ready(function () {
+  $("#plannerAdd").click(function () {
+    console.log("new planned idea");
+    var userIdea = $('#plan-user-data').val();
+    console.log(userIdea); //$("#plan-data").append(userIdea + "<br>");
+
+    $.ajax({
+      type: "GET",
+      url: "/addToPlanner",
+      headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      },
+      data: {
+        "plan-idea": userIdea
+      },
+      success: function success(data) {
+        console.log("Successfully added " + data.toString()); //window.location.href = "/addToPlanner?;
+      }
+    });
+  });
+});
 
 /***/ }),
 

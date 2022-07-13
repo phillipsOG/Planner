@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\PlannerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,9 +18,4 @@ use App\Http\Controllers\SearchController;
 */
 
 Route::get('/', [HomeController::class, 'index']);
-Route::get('/searchResults', [SearchController::class, 'searchResults']);
-Route::get('/movieSearchDesc', [SearchController::class, 'movieSearchDesc']);
-Route::get('/movieSearchDescTitleYear', [SearchController::class, 'movieSearchDescTitleYear']);
-Route::get('/viewPoster', [SearchController::class, 'singlePosterView']);
-Route::get('/viewPosterNY', [SearchController::class, 'singlePosterViewNoYear']);
-Route::get('/raw', [SearchController::class, 'raw']);
+Route::get('/addToPlanner', [PlannerController::class, 'addToPlanner']);
